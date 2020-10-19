@@ -1,0 +1,129 @@
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                {% if user %}
+                <h1 class="title dash-title">
+                    Hello, {{ user.name }}
+                </h1>
+                {% else %}
+                    <p>Nobody is logged in</p>
+                {% endif %}
+                <h2 class="subtitle">
+                    I hope you are having a great day!
+                </h2>
+            </div>
+        </div>
+        <div id="dash-notification" class="notification is-primary is-light">
+            <button class="delete"></button>
+            <div class="columns dash-notification-text no-height">
+                <div class="column is-two-thirds">
+                <strong>Welcome Back!</strong>
+                <br>
+                Did you know that completing your <a href=" {{'merchant/my-store'|page}} "> <strong>Business Info</strong></a>  speeds up the selection process?
+                <br>
+                <br>
+                <strong>Note:</strong> After accomplishing your business info you may start listing you <a href=" {{'merchant/products'|page}} "> <strong>product</strong> </a>
+                </div>
+                <div class="column dash-img-container is-hidden-mobile">
+                    <img src="{{'assets/img/icons/rocket.svg'|theme}}" class="dash-img">
+                </div>                        
+            </div>
+
+          </div>
+    </section>
+    
+    <section class="info-tiles">
+        <div class="tile is-ancestor ">
+            <div class="tile is-parent">
+                <article class="tile is-child box card-dash-1">
+                    <p class="title">439k</p>
+                    <p class="subtitle">Users</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box card-dash-2">
+                    <p class="title">59k</p>
+                    <p class="subtitle">Products</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box card-dash-3">
+                    <p class="title">3.4k</p>
+                    <p class="subtitle">Open Orders</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <div class="columns no-height">
+        <div class="column no-side-padding">
+            <div class="card events-card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        My Products
+                    </p>
+                </header>
+                <div class="card-table">
+                    <div class="content">
+                        <table class="table is-fullwidth is-striped">
+                            <tbody>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                                <tr>
+                                    <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                    <td>Lorum ipsum dolem aire</td>
+                                    <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="#" class="card-footer-item">View All</a>
+                </footer>
+            </div>
+        </div>
+
+    </div>

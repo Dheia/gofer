@@ -1,0 +1,22 @@
+fields:
+    question:
+        label: Question
+        span: full
+        type: text
+    answer:
+        label: Answer
+        span: full
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: question
+            type: slug
+        type: text
+    categories:
+        label: Categories
+        span: left
+        nameFrom: category_title
+        descriptionFrom: description
+        type: relation

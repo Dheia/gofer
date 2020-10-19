@@ -1,0 +1,156 @@
+
+<div class="media-wrapper">
+    <!-- Landing page Hero -->
+    <section class="hero">
+        <div class="hero-head">
+
+        </div>
+
+        <!-- Hero Image and Title -->
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered">
+
+                    <!-- Landing page Title -->
+                    <div class="column is-5 is-offset-1 landing-caption">
+                        <div class="divider"></div>
+                        <h1 class="title is-1 is-dark is-semibold is-spaced main-title">News & Media</h1>
+                        <h2 class="subtitle is-6 is-dark is-thin">
+                            Cryptocurrency brought to the next level. Join our ICO for supercharged rates.
+                        </h2>
+
+                    </div>
+                    <!-- Hero image -->
+                    <div class="column is-6">
+                        <figure class="image">
+                            <img src="{{'assets/img/illustrations/media.svg'|theme}}" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+
+                <div class="column is-9">
+                    <!-- Content wrapper -->
+                    <div class="content-wrapper">
+
+                        {% set posts = blogPosts.posts %}
+                        {% for post in posts %}
+                        <!-- Post -->
+                        <div class="blog-post">
+                            <a href="{{ post.url }}">
+                                <!-- Featured image -->
+                                {% for image in post.featured_images|slice(0, 1) %}
+                                <div class="featured-image">
+                                    <img src="{{ image.path }}" alt="">
+                                </div>
+                                {% endfor %}
+                                <!-- Content -->
+                                <div class="content">
+                                    <div class="post-title">{{ post.title }}<span class="blog-date">{{ post.published_at|date('M d, Y') }}</span></div>
+                                    
+                                    <p>
+                                        {{ post.excerpt }}
+                                    </p>
+                                    <!-- Meta -->
+                                    <div class="post-meta">
+                                        <div class="author-block">
+                                            <div class="image is-32x32">
+                                                <img src="{{'assets/img/logo1.png'|theme}}" alt="">
+                                            </div>
+                                            <div class="author-name">
+                                                <span>by Gofer</span>
+                                                
+                                                <span><small>in</small> {% for category in post.categories %} {{ category.name }} {% if not loop.last %}, {% endif %} {% endfor %}</span>
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="stats-block">
+                                            <div class="comments">
+                                                <i data-feather="message-circle"></i>
+                                                <span>0</span>
+                                            </div>
+                                            <div class="likes">
+                                                <i data-feather="heart"></i>
+                                                <span>39</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% else %}
+                        <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+                        {% endfor %}
+
+
+                        <!-- CTA -->
+                        <div class="cta-wrapper has-text-centered">
+                            <a href="#" class="button k-button k-primary raised has-gradient is-bold">
+                                <span class="text">Load More</span>
+                                <span class="front-gradient"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- /Content wrapper -->
+                </div>
+
+                <div class="column is-3">
+
+                    <div class="search-widget">
+                        <div class="control">
+                            <!-- Field -->
+                            <div class="control-material is-primary">      
+                                <input class="material-input " type="email" required>
+                                <span class="material-highlight"></span>
+                                <span class="bar"></span>
+                                <label>Search articles</label>
+                                <i data-feather="search"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="categories-widget">
+                        <div class="widget-title">
+                            Categories
+                        </div>
+
+                        <ul class="categories-list">
+                            <li>
+                                <a class="is-active" href="#">
+                                    <span>All Posts</span>
+                                    <span class="tag">53</span>
+                                </a>
+                            </li>
+                            <li><a href="#">Blockchain</a></li>
+                            <li><a href="#">Crypto Market</a></li>
+                            <li><a href="#">Cryptomining</a></li>
+                            <li><a href="#">Featured</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tags-widget">
+                        <div class="widget-title">
+                            Tags
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag">Bitcoin</span>
+                            <span class="tag">Cryptocurrency</span>
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Ethereum</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

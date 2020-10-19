@@ -1,0 +1,16 @@
+fields:
+    category_title:
+        label: Title
+        span: full
+        type: text
+    description:
+        label: Description
+        span: full
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: category_title
+            type: slug
+        type: text

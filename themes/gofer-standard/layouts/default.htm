@@ -1,0 +1,45 @@
+[session]
+security = "all"
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title> Gofer - {{ this.page.title }}</title>
+        <link rel="icon" type="image/png" href="{{'assets/img/logo1.png'|theme}}" />
+
+        <!--Core CSS -->
+        <link rel="stylesheet" href="{{ 'assets/css/slick.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/slick-theme.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.carousel.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.theme.default.min.css'|theme }}">
+
+        <script
+        src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
+        data-auto-a11y="true"
+      ></script>
+        
+
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/dist/css/gofer.css'|theme }}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+
+    </head>
+    <body class="body-flow">
+        {% partial 'site/preloader' %}
+
+        {% partial 'site/navbar' %}
+
+        {% partial 'site/navbar-clone' %}
+
+        {% page %}
+
+        {% partial 'site/footer' %}
+        {% partial 'site/backtotop' %}
+        {% partial 'site/scripts' %}
+    </body>  
+</html>

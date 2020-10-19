@@ -1,0 +1,97 @@
+/* ==========================================================================
+Color variables
+========================================================================== */
+
+$white: #fff;
+$smoke-white: #fcfcfc;
+$grey-white: #f2f2f2;
+$gofer-pink: #ff0076;
+
+$primary: #00dbc7;
+$secondary: #00dbc7;
+$accent: #ffe300;
+$gofer-blue: #2f2478;
+
+
+$fade-grey: #ededed;
+$light-grey: #EFF4F7;
+$title-grey: #A9ABAC;
+$blue-grey: #444F60;
+$muted-grey: #999;
+$light-blue-grey: #98a9c3;
+$medium-grey: #66676b;
+$basaltic-grey: #878787;
+$purple: #7F00FF;
+$mint: #11FFBD;
+$bloody: #FC354C;
+$pinky: #ff0076;
+$frost: #004e92;
+$placeholder: #cecece;
+$dark-grey: #344258;
+$border-grey: #ccc;
+$muted-grey: #999;
+$section-grey: #fbfbfb;
+$sidebar: #344258;
+
+$grey: #ccc;
+$red: #FF7273;
+$blue: #2f2478;
+$green: #00b289;
+$orange: #eda514;
+
+$white: #fff;
+$smoke-white: #fcfcfc;
+$placeholder: #cecece;
+$light-grey: #f9f9f9;
+$muted-grey: #999;
+$title-grey: #A9ABAC;
+$fade-grey: #ededed;
+$accent-grey: #ccc;
+$dark-text: #4a4a4a;
+$chosen-grey: #e0e0e0;
+$chosen-dark-grey: #66676b;
+$grey-6: #666;
+$grey: #ccc;
+$section-grey: #fcfcfc;
+$light-blue: rgba(94,147,255,.9);
+
+$shadowDark: #D9DDE6;
+$background: #E4E9F2;
+$shadowLight: #EFF5FE;
+
+$primary-accent: #2f2478;
+$secondary-accent: #33ccff;
+
+/* ==========================================================================
+1. Shadow variables
+========================================================================== */
+
+//Base shadow
+$base-shadow: rgba(0, 0, 0, 0.12);
+
+//Primary box shadow
+$primary-shadow-from: rgba(127, 0, 255, 0.42);
+$primary-shadow-to: rgba(63, 0, 252, 0.2);
+$primary-box-shadow:  0 14px 26px -12px $primary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $primary-shadow-to !important;
+
+//Secondary box shadow
+$secondary-shadow-from: rgba(0, 255, 153, 0.42);
+$secondary-shadow-to: rgba(51, 204, 255, 0.2);
+$secondary-box-shadow:  0 14px 26px -12px $secondary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $secondary-shadow-to !important;
+
+
+
+
+//Shadow
+$light-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+
+$path: "./themes/gofer-standard/assets";
+
+
+
+//Heading font
+$font: 'gilroy-extrabold', sans-serif !important;
+$family-primary: 'gilroy-extrabold', sans-serif !important;
+
+//Body font
+$family-secondary: 'gilroy-light', sans-serif !important;

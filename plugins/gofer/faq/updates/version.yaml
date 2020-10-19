@@ -1,0 +1,20 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table gofer_faq_'
+    - builder_table_create_gofer_faq_.php
+1.0.3:
+    - 'Created table gofer_faq_'
+    - builder_table_create_gofer_faq__2.php
+1.0.4:
+    - 'Created table gofer_faq_category'
+    - builder_table_create_gofer_faq_category.php
+1.0.5:
+    - 'Created table gofer_faq_faq_category'
+    - builder_table_create_gofer_faq_faq_category.php
+1.0.6:
+    - 'Updated table gofer_faq_category'
+    - builder_table_update_gofer_faq_category.php
+1.0.7:
+    - 'Updated table gofer_faq_category'
+    - builder_table_update_gofer_faq_category_2.php

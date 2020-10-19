@@ -1,0 +1,6 @@
+plugin:
+    name: 'gofer.merchantprofile::lang.plugin.name'
+    description: 'gofer.merchantprofile::lang.plugin.description'
+    author: Gofer
+    icon: oc-icon-user
+    homepage: ''

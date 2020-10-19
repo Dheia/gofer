@@ -1,0 +1,28 @@
+/* ==========================================================================
+Main SCSS file / Fresh
+========================================================================== */
+
+//Imports
+@import 'abstracts/colors';
+@import 'abstracts/animations';
+@import 'layout/navbar';
+@import 'layout/sidebar';
+@import 'layout/sections';
+@import 'layout/hero';
+@import 'layout/footer';
+@import 'layout/blog';
+@import 'layout/layout';
+@import 'layout/faq';
+@import 'layout/features';
+@import 'components/buttons';
+@import 'components/dropdowns';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/testimonials';
+@import 'utilities/utils';
+@import 'layout/responsive';
+@import 'layout/dashboard';
+@import 'abstracts/typography';
+
+@import '~bulma/css/bulma.css';
+

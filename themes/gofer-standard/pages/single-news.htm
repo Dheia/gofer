@@ -1,0 +1,10 @@
+title = "Single News"
+url = "/news/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "news"
+==
+{% partial 'blog/blog-single' %}

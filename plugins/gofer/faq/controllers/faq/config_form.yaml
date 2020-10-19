@@ -1,0 +1,10 @@
+name: FAQ
+form: $/gofer/faq/models/faq/fields.yaml
+modelClass: Gofer\Faq\Models\Faq
+defaultRedirect: gofer/faq/faq
+create:
+    redirect: 'gofer/faq/faq/update/:id'
+    redirectClose: gofer/faq/faq
+update:
+    redirect: gofer/faq/faq
+    redirectClose: gofer/faq/faq

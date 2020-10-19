@@ -1,0 +1,6 @@
+plugin:
+    name: 'gofer.profile::lang.plugin.name'
+    description: 'gofer.profile::lang.plugin.description'
+    author: Gofer
+    icon: oc-icon-user-md
+    homepage: ''

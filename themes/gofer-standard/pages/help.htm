@@ -1,0 +1,61 @@
+title = "Help"
+url = "/help"
+layout = "default"
+is_hidden = 0
+
+[siteSearchInclude]
+
+[builderList]
+modelClass = "Gofer\Faq\Models\Category"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "category_title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% component 'siteSearchInclude' %}
+
+
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+
+
+<section class="section is-medium">
+    <div class="container">
+        <div class="title-wrapper has-text-centered">
+            <h2 class="title is-2">Wait, there's more</h2>
+            <h3 class="subtitle is-5 is-muted">To make you super happy</h3>
+            <div class="divider is-centered"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns is-multiline icon-list">
+                {% for record in records %}
+                <div class="column is-3">
+                    <a href="help/{{ record.slug }}">
+                    <div class="feature-icon has-text-centered">
+                        <div class="icon-wrap is-icon-reveal">
+                            <ion-icon name="logo-github" size="large"></ion-icon>
+                        </div>
+                        <h4>{{ record.category_title }}</h4>
+                          </a>
+                        <p> {{ record.description }} </p>
+                    </div>
+                    </a>
+                </div>
+                {% else %}
+                <li class="no-data">{{ noRecordsMessage }}</li>
+            {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>

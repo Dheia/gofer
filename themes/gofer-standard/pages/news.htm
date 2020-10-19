@@ -1,0 +1,18 @@
+title = "News"
+url = "/news"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "single-news"
+==
+{% set posts = blogPosts.posts %}
+
+
+
+{% partial 'blog/blog' %}

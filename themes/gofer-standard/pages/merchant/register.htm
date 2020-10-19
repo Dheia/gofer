@@ -1,0 +1,77 @@
+title = "Merchant Register"
+url = "/merchant/register"
+layout = "navless"
+is_hidden = 0
+
+[account]
+redirect = "merchant/dashboard"
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+<section class="container register-body">
+    <div class="columns is-multiline">
+      <div class="column is-8 is-offset-2 register">
+        <div class="columns">
+          <div class="column left">
+            <h1 class="title is-1">Super Cool Website</h1>
+            <h2 class="subtitle colored is-4">Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ex deleniti aliquam tempora libero excepturi vero soluta odio optio sed.</p>
+          </div>
+          <div class="column right has-text-centered">
+            <a href=" {{'merchant'|page}} "><img src="{{'assets/img/loaders/rings.svg'|theme}}" width="90px" /> <span class="gofer-title2"> gofer</span></a>
+            <p class="description">Register now and start setting up your store.</p>
+
+            {% if canRegister %}
+            {{ form_ajax('onRegister') }}
+
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-small" type="text" name="name" id="registerName" placeholder="Name">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-small" type="email" name="email" id="registerEmail" placeholder="Email">
+                    </div>
+                </div>
+
+                {% if loginAttribute == "username" %}
+                <div class="control">
+                    <input
+                        name="username"
+                        type="text"
+                        class="input is-small"
+                        id="registerUsername"
+                        placeholder="Name" />
+                </div>
+                {% endif %}
+                <div class="control">
+                    <input
+                        name="password"
+                        type="password"
+                        class="input is-small"
+                        id="registerPassword"
+                        placeholder="Choose a password" />
+                </div>
+                <br />
+              <button class="button is-block is-primary is-fullwidth is-small">Submit</button>
+
+              {{ form_close() }}
+              {% else %}
+                  <!-- Registration is disabled. -->
+              {% endif %}
+              <br />
+              <small><em>Lorem ipsum dolor sit amet consectetur.</em></small>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="column is-8 is-offset-2">
+        <br>
+
+      </div>
+    </div>
+  </section>

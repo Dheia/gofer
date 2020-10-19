@@ -1,0 +1,16 @@
+plugin:
+    name: 'gofer.faq::lang.plugin.name'
+    description: 'gofer.faq::lang.plugin.description'
+    author: Gofer
+    icon: oc-icon-question-circle
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Knowledge Base'
+        url: gofer/faq/faq
+        icon: icon-question-circle
+        sideMenu:
+            side-menu-item:
+                label: Category
+                url: gofer/faq/category
+                icon: icon-tag

@@ -1,0 +1,59 @@
+title = "FAQ"
+url = "/help/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Gofer\Faq\Models\Category"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "category_title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+<div class="divider is-centered is-spacer"></div>
+<!-- Title & subtitle -->
+{% if record %}
+
+    <h2 class="title is-dark is-semibold has-text-centered is-spaced"> {{ record.category_title }}</h2>
+<h4 class="subtitle is-6 is-dark has-text-centered is-compact"> {{ record.description }} </h4>
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
+
+
+
+
+<div class="content-wrapper is-large">
+    <div class="columns">
+            <!-- Accordion -->
+           
+            <div class="accordion">
+                <!-- Option -->
+                {% if record %}
+                    {% for faq in record.faqs %}
+                        <div class="accordion-option">
+                            <input type="checkbox" id=" {{ faq.question }} " class="accordion-toggle" />
+                            <label class="accordion-title" for=" {{ faq.question }} ">
+                                {{ faq.question }} 
+                            </label>
+                            <div class="accordion-content">
+                                <p> {{ faq.answer }} </p>
+                            </div>
+                        </div>
+                    {%endfor%}
+                {% else %}
+                {{ notFoundMessage }}
+                {% endif %}
+            <!-- /Accordion -->
+            </div>
+           
+    </div>
+</div>
+
+

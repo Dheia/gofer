@@ -1,0 +1,4 @@
+title: Category
+modelClass: Gofer\Faq\Models\Category
+toolbar:
+    buttons: reorder_toolbar

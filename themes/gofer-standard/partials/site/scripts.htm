@@ -1,0 +1,76 @@
+
+<script src="{{ 'assets/js/jquery.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/jquery-migrate-3.0.1.min.js'|theme }}"></script>
+<!-- Concatenated JS -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+<!-- Fresh JS -->
+<script language="JavaScript" type="text/javascript" src="{{'assets/dist/js/app.js'|theme}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="{{'assets/js/functions.js'|theme}}"></script>
+<script language="JavaScript" type="text/javascript" src="{{'assets/js/main.js'|theme}}"></script>
+
+<script src="{{ 'assets/js/slick.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/owl.carousel.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/scrollax.min.js'|theme }}"></script>
+
+
+
+{% framework extras %}
+{% scripts %}
+
+<script type="text/javascript">
+  $(document).on('ready', function(){
+  $('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  swipe:true,
+  autoplay: false,
+  autoplaySpeed: 2000,
+  infinite:true,
+  asNavFor: '.slider-nav',
+  responsive: [
+      {
+      breakpoint: 1050,
+      settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows:true,
+          dots:true,
+          autoplay: false
+          }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+  ]
+  });
+$('.slider-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  asNavFor: '.slider-for',
+  dots: false,
+  vertical:true,
+  focusOnSelect: true,
+  mobileFirst: false,
+  responsive: [
+      {
+      breakpoint: 1050,
+      settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+  ]
+});
+  });
+</script>
+

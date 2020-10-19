@@ -1,0 +1,17 @@
+title = "Products"
+url = "/products/:category?"
+layout = "default"
+is_hidden = 0
+
+[shopProductsList]
+categoryFilter = "{{ :category }}"
+scope = "showItems"
+limitType = "paginate"
+take = 20
+orderBy = "name"
+sort = "asc"
+productPage = "product"
+showCategoriesFilter = 1
+showQuickAdd = 0
+==
+{% component 'shopProductsList' %}

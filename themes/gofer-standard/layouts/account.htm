@@ -1,0 +1,50 @@
+[session]
+security = "all"
+
+[cartButton]
+cartPage = "merchant/cart"
+colorBG = "#00DBC7"
+color = "#FFFFFF"
+position = "bottom-right"
+hideOnEmpty = 1
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title> Gofer - {{ this.page.title }}</title>
+        <link rel="icon" type="image/png" href="{{'assets/img/logo1.png'|theme}}" />
+
+        <!--Core CSS -->
+        <link rel="stylesheet" href="{{ 'assets/css/aos.css'|theme }}">        
+        <link rel="stylesheet" href="{{ 'assets/css/slick.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/slick-theme.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.carousel.min.css'|theme }}">
+        <link rel="stylesheet" href="{{ 'assets/css/owl.theme.default.min.css'|theme }}">
+
+        <script src="https://kit.fontawesome.com/e4f742994b.js" crossorigin="anonymous"></script>
+        
+
+        <link rel="stylesheet" type="text/css" href="{{ 'assets/dist/css/gofer.css'|theme }}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+
+        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body>          
+        {% partial 'site/side-navbar' %}
+        <main class="main-account dash-body">
+
+            {% page %}
+
+        </main>
+{% component 'cartButton' %}
+        {% partial 'site/acct-scripts' %}
+    </body>  
+</html>

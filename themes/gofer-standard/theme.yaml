@@ -1,0 +1,19 @@
+name: 'Gofer - Standard'
+description: 'Standard theme for gofer cms website.'
+author: Norbz
+homepage: 'Http://gofer.ph'
+code: ''
+
+
+form:
+    fields:
+        site_name:
+            label: Site Name
+            comment: The website name as it should appear on the front-end
+            default: Gofer - Standard
+        logo:
+            label: logo
+            type: mediafinder
+            mode: image
+            imageWidth: 100
+            imageHeight: 100

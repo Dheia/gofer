@@ -1,0 +1,71 @@
+{% set posts = blogPosts.posts %}
+
+<div class="col-lg-9">
+    <div class="row">
+        <ul class="list-unstyled">
+            {% for post in posts %}
+                <li>
+                    <div class="col-md-6 col-lg-12 ftco-animate">
+                        <div class="blog-entry d-lg-flex">
+                            {% for image in post.featured_images|slice(0, 1) %}
+                            <div class="half">
+                                <a href="single.html" class="img d-flex align-items-end" style="background-image: url('{{ image.path }}')">
+                                    <div class="overlay"></div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                            <div class="text px-md-4 px-lg-5 half pt-3">
+                                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                <p>
+                                    {% if post.categories.count %}
+                                        {% set categoryLinks = post.categories | map(c => "<a href=\"#{c.url}\">#{c.name}</a>") | join(', ') %}
+
+                                        {{ 'rainlab.blog::lang.post.posted_byline' | trans({
+                                            date: post.published_at | date('rainlab.blog::lang.post.date_format' | trans),
+                                            categories: categoryLinks
+                                        }) }}
+                                    {% else %}
+                                        {{ 'rainlab.blog::lang.post.posted_byline_no_categories' | trans({
+                                            date: post.published_at | date('rainlab.blog::lang.post.date_format' | trans)
+                                        }) }}
+                                    {% endif %}
+                                </p>
+                                <p>{{ post.excerpt }}</p>
+                                <p class="mb-0"><a href="single.html" class="btn btn-primary">Read More <span class="icon-arrow_forward ml-4"></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+            <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    
+
+    <div class="row mt-5">
+      <div class="col text-center">
+        <div class="block-27">
+            {% if posts.lastPage > 1 %}
+            <ul class="pagination">
+                {% if posts.currentPage > 1 %}
+                    <li><a href="{{ this.page.baseFileName | page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+                {% endif %}
+        
+                {% for page in 1..posts.lastPage %}
+                    <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                        <a href="{{ this.page.baseFileName | page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
+                    </li>
+                {% endfor %}
+        
+                {% if posts.lastPage > posts.currentPage %}
+                    <li><a href="{{ this.page.baseFileName | page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+                {% endif %}
+            </ul>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+</div>

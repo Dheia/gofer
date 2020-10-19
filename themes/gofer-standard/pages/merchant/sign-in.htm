@@ -1,0 +1,59 @@
+title = "Sign In"
+url = "/merchant/sign-in"
+layout = "navless"
+is_hidden = 0
+
+[account signin]
+redirect = "merchant/dashboard"
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+<section class="hero is-fullheight login-body">
+    <div class="hero-body has-text-centered">
+      <div class="login">
+        
+        <a href=" {{'merchant'|page}} "><img src="{{'assets/img/loaders/rings.svg'|theme}}" width="125px" /> <span class="gofer-title"> gofer</span></a>
+        {{ form_ajax('onSignin') }}
+
+          <div class="field">
+            <div class="control">
+              <input class="input is-medium is-rounded" name="login"
+              type="text" id="userSigninLogin" placeholder="Your@email.com" autocomplete="username" required />
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input class="input is-medium is-rounded" name="password" id="userSigninPassword" type="password" placeholder="Password" autocomplete="current-password" required />
+            </div>
+          </div>
+          <br />
+          {% if rememberLoginMode == 'ask' %}
+          <div class="form-group">
+              <div class="checkbox">
+              <label><input name="remember" type="checkbox" value="1">Stay logged in</label>
+              </div>
+          </div>
+          {% endif %}
+          <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit">
+            Login
+          </button>
+
+          {{ form_close() }}
+
+        <br>
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <a href="#" class="login-link">Forgot Password?</a>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <a href="#" class="login-link">Create an Account</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>

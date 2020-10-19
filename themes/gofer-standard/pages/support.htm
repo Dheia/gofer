@@ -1,0 +1,51 @@
+title = "Contact Us"
+url = "/support"
+layout = "default"
+is_hidden = 0
+
+[contactform]
+
+==
+<section class="section section-light-grey is-medium">
+    <div class="container">
+        <div class="title-wrapper has-text-centered">
+            <h2 class="title is-2 is-spaced">Having Problems?</h2>
+            <h3 class="subtitle is-5 is-muted">We'd love to hear from You</h3>
+            <div class="divider is-centered"></div>
+        </div>
+
+                    <!-- Content wrapper -->
+                    <div class="content-wrapper is-large">
+                        <div class="columns">
+                            <div class="column is-8 is-offset-2">
+                                <!-- Contact icons -->
+                                <div class="contact-icons">
+                                    <!-- Phone -->
+                                    <a class="contact-icon">
+                                        <img class="is-phone" src="{{'assets/img/icons/phone.svg'|theme}}" alt="">
+                                    </a>
+                                    <!-- Mail -->
+                                    <a class="contact-icon">
+                                        <img class="is-phone" src="{{'assets/img/icons/mail.svg'|theme}}" alt="">
+                                    </a>
+                                    <!-- Telegram -->
+                                    <a class="contact-icon">
+                                        <img class="is-telegram" src="{{'assets/img/logos/telegram.svg'|theme}}" alt="">
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+        
+                        <div class="columns">
+                            <div class="column is-6 is-offset-3">
+                                <!-- Form -->
+                                {% component 'contactform' %}
+                                <!-- /Form -->
+                            </div>
+                        </div>
+        
+        
+                    </div>
+                    <!-- Content wrapper -->
+    </div>
+</section>

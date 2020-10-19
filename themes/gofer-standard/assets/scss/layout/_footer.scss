@@ -1,0 +1,57 @@
+/* ==========================================================================
+Fresh Footer
+========================================================================== */
+
+footer.footer-dark {
+    background: $primary;
+    color: $white;
+
+    .columns {
+        margin-top: 35px;
+    }
+
+    .footer-logo {
+        img {
+            height: 40px;
+        }
+    }
+
+    .footer-column {
+        .footer-header {
+            h3 {
+                font-weight: 500;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .link-list {
+            line-height: 40px;
+            font-size: 1.1rem;
+
+            a {
+                font-family: $family-secondary;
+                color: $smoke-white;
+                font-weight: 400;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+
+        .level-item {
+            .icon {
+                color: $smoke-white;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: $gofer-pink;
+                }
+            }
+        }
+    }
+}

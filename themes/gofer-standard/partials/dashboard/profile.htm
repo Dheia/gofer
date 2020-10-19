@@ -1,0 +1,68 @@
+<div class="column is-3 ">
+    <aside class="menu is-hidden-mobile">
+        <div class="profile-container">
+            <div class="dash-avatar">
+                <div class="half">
+                  <label for="profile2" class="profile-dropdown">
+                    <input type="checkbox" id="profile2">
+                    {% if user %}            
+                        <img class="round" width="30" height="30" avatar="{{ user.name }}">
+                    {% endif %}                    
+                    <span class="avatar-name">{{ user.name }}</span>
+                    <label for="profile2"><i class="fa fa-caret-down"></i></label>
+                    <ul>
+                      <li><p class="profile-avatar-text">Signed in as <span class="avatar-text-span">{{ user.name }} {{ user.surname }}</span> </p></li>
+                      <li><a href="{{ 'merchant/profile'|page }}"><i class="mdi mdi-account"></i>Account</a></li>
+                      <li><a data-request="onLogout" data-request-data="redirect: '/merchant'">Sign Out</a></li>
+                    </ul>
+                  </label>
+                </div>
+              </div>
+
+        <hr>
+        <div class="columns profile-box is-vcentered">
+            <div class="column is-gapless is-one-quarter profile-icon-box">                      
+                <img src="{{'assets/img/icons/rocket.svg'|theme}}">
+          </div>
+            <div class="column">                      
+
+                    <a href="{{ 'merchant/my-store'|page }}" class="profile-link-title">My Store</a>
+                    <p class="profile-link-sub">help adfasdfasdf</p> 
+              </div>
+        </div>
+        <div class="columns profile-box is-vcentered">
+            <div class="column is-gapless is-one-quarter profile-icon-box">                      
+                <img src="{{'assets/img/icons/rocket.svg'|theme}}">
+          </div>
+            <div class="column">                      
+
+                    <a href="{{ 'merchant/profile'|page }}" class="profile-link-title">Edit Store Items</a>
+                    <p class="profile-link-sub">help adfasdfasdf</p> 
+              </div>
+        </div>
+        <div class="columns profile-box is-vcentered">
+            <div class="column is-gapless is-one-quarter profile-icon-box">                      
+                <img src="{{'assets/img/icons/rocket.svg'|theme}}">
+          </div>
+            <div class="column">                      
+
+                    <a href="{{ 'merchant/products'|page }}" class="profile-link-title">Our Products</a>
+                    <p class="profile-link-sub">help adfasdfasdf</p> 
+              </div>
+        </div>
+        <div class="columns help-box is-centered">
+            <div class="column profile-help"> 
+                <div class="profile-img-con"> 
+                    <img src="{{'assets/img/icons/rocket.svg'|theme}}" class="profile-help-img">
+                 </div>     
+                <p class="profile-link-help">Having any <strong>trouble?</strong> </p>                
+                <div class="buttons">
+                    <button class="button is-primary is-fullwidth">Get Help!</button>
+                  </div>
+              </div>
+        </div>
+        </div>
+
+
+    </aside>
+</div> 

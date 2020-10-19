@@ -1,0 +1,24 @@
+<form data-request="contactform::onSend" class="contact-form" data-request-validate data-request-flash>
+    <div class="columns is-multiline">
+        <div class="column is-12">
+            <input name="name" class="input is-medium" type="text" placeholder="Name *">
+        </div>
+        <div class="column is-12">
+            <input name="email"  class="input is-medium" type="text" placeholder="Email *">
+        </div>
+        <div class="column is-12">
+            <input name="subject" class="input is-medium" type="text" placeholder="Subject">
+        </div>
+        <div class="column is-12">
+            <textarea name="content"  class="textarea" rows="6" placeholder="Your Message"></textarea>
+        </div>
+        <div class="column is-12">
+            <div class="form-footer has-text-right mt-10">
+                <button class="button cta is-large primary-btn form-button raised is-clear" data-attach-loading>Send Message</button>
+            </div>
+        </div>
+        <div class="alert alert-danger" data-validate-error>
+            <p data-message></p>
+        </div>
+    </div>
+</form>

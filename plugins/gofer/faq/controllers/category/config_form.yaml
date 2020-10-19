@@ -1,0 +1,10 @@
+name: Category
+form: $/gofer/faq/models/category/fields.yaml
+modelClass: Gofer\Faq\Models\Category
+defaultRedirect: gofer/faq/category
+create:
+    redirect: 'gofer/faq/category/update/:id'
+    redirectClose: gofer/faq/category
+update:
+    redirect: gofer/faq/category
+    redirectClose: gofer/faq/category

@@ -1,0 +1,100 @@
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ 'home'|page }}">
+                
+                <img src="{{'assets/img/loaders/rings.svg'|theme}}" alt=""> <span class="nav-title"> gofer</span>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu is-static">
+            <div class="navbar-end">
+                <a href="{{'home'|page}}" class="navbar-item">
+                    Home
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                      Become a Partner
+                    </a>
+            
+                    <div id="moreDropdown" class="navbar-dropdown">
+                      <a class="navbar-item" href="{{'merchant'|page}}">
+                        <span>
+                            <span class="icon" style="color: #333;" >
+                            <i class="fas fa-handshake" aria-hidden="true"></i>
+                            </span>
+                            <Strong>Merchant</Strong>
+                            <br>
+                            Connect more with us
+                        </span>
+                      </a>
+                      <hr class="navbar-divider">
+                      <a class="navbar-item"  href="{{'rider'|page}}">
+                            <span>
+                                <span class="icon" style="color: #333;" >
+                                <i class="fas fa-handshake" aria-hidden="true"></i>
+                                </span>
+                                <Strong>Rider</Strong>
+                                <br>
+                                Connect more with us
+                            </span>
+                       
+                      </a>
+
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        About Us
+                    </a>
+            
+                    <div id="moreDropdown" class="navbar-dropdown">
+                        <a class="navbar-item" href="{{ 'about'|page }}">
+                            <span>
+                                <span class="icon" style="color: #333;" >
+                                <i class="fas fa-handshake" aria-hidden="true"></i>
+                                </span>
+                                <Strong>About Us</Strong>
+                                <br>
+                                Connect more with us
+                            </span>
+                          </a>
+                          <hr class="navbar-divider">
+                      <a class="navbar-item" href="{{ 'news'|page }}">
+                        <span>
+                            <span class="icon" style="color: #333;" >
+                            <i class="fas fa-handshake" aria-hidden="true"></i>
+                            </span>
+                            <Strong>News</Strong>
+                            <br>
+                            Connect more with us
+                        </span>
+                      </a>
+                      <hr class="navbar-divider">
+                      <a class="navbar-item"  href="{{'support'|page}}">
+                            <span>
+                                <span class="icon" style="color: #333;" >
+                                <i class="fas fa-handshake" aria-hidden="true"></i>
+                                </span>
+                                <Strong>Contact Us</Strong>
+                                <br>
+                                Connect more with us
+                            </span>
+                       
+                      </a>
+
+                    </div>
+                </div>
+                <a class="navbar-item"  href="{{'help'|page}}">
+                        Help
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

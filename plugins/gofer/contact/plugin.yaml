@@ -1,0 +1,6 @@
+plugin:
+    name: 'gofer.contact::lang.plugin.name'
+    description: 'gofer.contact::lang.plugin.description'
+    author: Gofer
+    icon: oc-icon-comments-o
+    homepage: ''

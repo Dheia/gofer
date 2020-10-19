@@ -1,0 +1,48 @@
+name: 'Main Menu'
+items:
+    -
+        title: Profile
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: profile
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Products
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: products
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Categories
+        type: pixel-shop-categories
+        code: categories
+        cmsPage: products
+        replace: '1'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Brands
+        type: pixel-shop-brands
+        code: ''
+        cmsPage: products
+        replace: '1'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

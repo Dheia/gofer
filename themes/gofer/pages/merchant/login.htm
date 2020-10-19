@@ -1,0 +1,23 @@
+title = "Login"
+url = "/merchant/login"
+layout = "default"
+is_hidden = 0
+
+[account]
+redirect = "merchant/dashboard"
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+{% if not user %}
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <h3>Sign in</h3>
+            {% partial account ~ '::signin' %}
+        </div>
+
+    </div>
+
+{% endif %}

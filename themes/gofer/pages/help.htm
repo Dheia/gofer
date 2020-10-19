@@ -1,0 +1,18 @@
+title = "Help"
+url = "/help"
+layout = "help-layout"
+description = "Knowledge Base"
+is_hidden = 0
+==
+<div class="d-flex">
+        {% partial 'help/sidebar' %}
+        <div id="page-content-wrapper">
+            <div class="col-md-10 offset-md-1 content">
+                <button class="navbar-toggler" id="menu-toggle"> <span class="ion-ios-menu"></span></button>
+                {% content "help/question-general.htm" %}
+            </div>
+
+        </div>
+        
+
+  </div>

@@ -1,0 +1,480 @@
+/*! _features.scss | Krypton | CSS Ninja */
+
+/* ==========================================================================
+Features elements styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Video pulsating button
+1. Icon box features
+2. Side features
+3. Flying tabs
+4. Countdown
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Video pulsating button
+========================================================================== */
+
+.video-button {
+    position: relative;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+    //Play icon
+    img {
+        position: relative;
+        display: block;
+        width: 24px;
+        height: 24px;
+        left: 2px;
+        z-index: 3;
+    }
+    //Pulsating pseudo element
+    &:after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 12px);
+        left: calc(50% - 12px);
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        animation: pulse 1.6s infinite;
+        animation-duration: 2s;
+        transform-origin: center center ;
+        z-index: 0;
+    }
+}
+
+
+/* ==========================================================================
+1. Icon box features
+========================================================================== */
+
+.feature {
+    text-align: center;
+    img {
+        display: block;
+        margin: 0 auto;
+        max-height: 120px;
+    }
+    h4 {
+        margin-top: 10px;
+        font-family: 'gilroy-bold', sans-serif;
+    }
+    p {
+        font-family: ' gilroy-light', sans-serif;
+        font-size: .9rem;
+        opacity: 0.8;
+    }
+}
+
+/* ==========================================================================
+2. Side features
+========================================================================== */
+
+//Featured image
+.side-feature {
+    max-height: 500px;
+}
+
+//Feature content
+.side-feature-content {
+    .title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    //icon
+    img {
+        max-height: 40px;
+        width: 40px;
+    }
+    //paragraph
+    p {
+        //light modifier
+        &.is-light {
+            color: $white;
+            opacity: 0.8;
+        }
+        &.is-dark {
+            color: $dark-grey;
+            opacity: 0.9;
+        }
+        //light blue modifier
+        &.is-light-blue {
+            color: #d5ebff;
+        }
+    }
+    //title
+    h3 span {
+        padding: 0 10px;
+    }
+}
+
+/* ==========================================================================
+3. Flying tabs
+========================================================================== */
+
+//Container
+.flying-tabs-container {
+    max-width: 560px;
+    margin: 0 auto;
+    //tabs
+    .flying-tabs {
+        //tab-item
+        .flying-child {
+            display: inline;
+            text-align: center;
+            &.is-active a {
+                color: $primary !important;
+                font-family: 'gilroy-extrabold', sans-serif;
+            }
+        }
+        //link element
+        a {
+            font-family: 'gilroy-light', sans-serif;
+            display: inline-block;
+            width: 22.4%;
+            padding: .75rem 0;
+            text-decoration: none;
+            color: $dark-text;
+            transition: all .3s;
+            &:hover {
+                color: $primary;
+            }
+        }
+        //Settings for underline
+        .tab-1.is-active {
+            margin: 0;
+        }
+
+        .tab-2.is-active ~ .slider {
+            margin-left: 25%;
+        }
+
+        .tab-3.is-active ~ .slider {
+            margin-left: 50%;
+        }
+
+        .tab-4.is-active ~ .slider {
+            margin-left: 75%;
+        }
+        //Flying underline
+        .slider {
+            height: 2px;
+            border-radius: 10px;
+            width: 25%;
+            margin: 0;
+            border: none;
+            transition: .3s ease-in-out;
+        }
+    }
+}
+
+//Tab content
+.tab-content {
+    display: none;
+    min-height: 312px;
+    margin-top: 40px;
+    //Active state
+    &.is-active {
+        display: block;
+    }
+    //Side image
+    img {
+        height: 320px;
+        animation-delay: .3s;
+    }
+    //Countdown card
+    .ico-card {
+        width: 100%;
+        color: $dark-text;
+        padding: 30px 40px;
+        border-radius: 6px;
+        animation-delay: .3s;
+        //Progress bar
+        .progress-block {
+            .progress-tags {
+                display: flex;
+                padding: 20px 30px;
+                div {
+                    position: relative;
+                    text-align: right;
+                    font-family: 'gilroy-extrabold', sans-serif;
+                    font-size: .65rem;
+                    text-transform: uppercase;
+                    &:before {
+                        content: '';
+                        height: 26px;
+                        width: 1px;
+                        background: $smoke-white;
+                        position: absolute;
+                        top: 25px;
+                        right: 0px;
+                        transform: translateX(50%);
+
+                    }
+                    &:first-child, &:nth-child(2) {
+                        flex-grow: 2;
+                    }
+                    &:nth-child(3) {
+                        flex-grow: 1;
+                    }
+                }
+            }
+            //Color
+
+        }
+        //Button
+        .button-block {
+            text-align: center;
+            margin: 20px 0 10px 0;
+            padding: 0 15%;
+        }
+        //Icons
+        .icon-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            i {
+                margin: 0 5px;
+                color: $smoke-white;
+            }
+        }
+    }
+    //Text content
+    .text-content {
+        p {
+            animation-delay: .15s;
+        }
+        //Bullet list
+        .custom-bullet-list {
+            li::before {
+                content: "೦ ";
+                color: $secondary;
+            }
+            li {
+                padding: 10px 0;
+                color: $dark-grey;
+                font-family: 'gilroy-light', sans-serif;
+                font-weight: 300;
+                &:first-child {
+                    animation-delay: .15s;
+                }
+                &:nth-child(2) {
+                    animation-delay: .2s;
+                }
+                &:nth-child(3) {
+                    animation-delay: .25s;
+                }
+                span {
+                    &:first-child {
+                        font-family: 'gilroy-extrabold', sans-serif;
+                    }
+                    &.item-content {
+                        margin: 0 16px !important;
+                        font-size: 90%;
+                        font-family: 'gilroy-light', sans-serif;
+                        font-weight: 300;
+                        color: #3e3e3e;
+                    }
+                }
+            }
+        }
+    }
+}
+.flying-tabs-content{
+    border: 1px solid #00dbc7;
+    border-radius: 16px;
+}
+
+/* ==========================================================================
+4. Countdown
+========================================================================== */
+
+ul#countdown {
+    position: relative;
+    margin: 10px auto;
+    padding: 0 10px;
+    color: #fff;
+    border-width: 1px 0;
+    overflow: hidden;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    //Left pulled
+    &.is-pulled-left {
+        left: -10%;
+    }
+    //Modified for ICO card
+    &.is-ico {
+        .label {
+            color: #f9f9f9;
+            font-size: 10px;
+        }
+    }
+    //Numbers
+    .number {
+        background-color: none !important;
+    }
+    //List element
+    li {
+        position: relative;
+        margin: 0 -3px 0 0;
+        padding: 0;
+        display: inline-block;
+        width: 25%;
+        font-size: 30px;
+        text-align: center;
+        //semicolumn pseudo element
+        &:after {
+            content: ':';
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        //Removing semicolumn for last element
+        &:last-child {
+            &:after {
+                content: '';
+            }
+        }
+        //Label
+        .label {
+            color: #adafb2;
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.merchant-register{
+    background-color: rgba(27, 38, 49, 0.1);
+    padding: 0px 50px;
+}
+/*===============
+Merchant Comparison
+===============*/
+#merch-features {
+	.icon {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		border-radius: 4px;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+	}
+	.box-item {
+		box-shadow: 0 0 12px #F4F4F4;
+		padding: 15px;
+		line-height: 22px;
+		margin-top: 30px;
+		border-radius: 3px;
+		background-color: #fff;
+		-webkit-transition: all .3s ease-in-out;
+		-mox-transition: all .3s ease-in-out;
+		transition: all .3s ease-in-out;
+		position: relative;
+		top: 0;
+		&:hover {
+			box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+		  }
+		  
+		  &:hover h4 {
+			color: $primary;
+          }
+          &:hover i {
+			color: $primary;
+		  }
+		  .text h4 {
+			cursor: pointer;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 22px;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+		  }
+		.icon {
+			text-align: center;
+			margin: 12px;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+				i {
+					font-size: 30px;
+					-webkit-transition: all 0.2s linear;
+					-moz-transition: all 0.2s linear;
+					-o-transition: all 0.2s linear;
+					transition: all 0.2s linear;
+                }
+		  }
+	}
+	.show-box {
+        margin-top: 50px;
+        padding: 2rem;
+	  }
+	  img {
+		width: 95%;
+	}
+	.content-left {
+		span {
+			float: left;
+		}
+	}
+	.content-left {
+		.text {
+			text-align: left;
+		}
+	}  
+	.content-right {
+		span {
+			float: left;
+		}
+	}
+} 
+.section-padding {
+    padding: 60px 0;
+    &:focus{
+        outline: 0;
+    }
+  }
+
+  
+  .m-centered {
+    text-align: center;
+}
+
+  @media(min-width: 480px){
+    #merch-features {
+        .content-left {
+            span {
+                float: right;
+            }
+        }
+        .content-left {
+            .text {
+                text-align: right;
+            }
+        }  
+    } 
+
+    .m-centered {
+        text-align: unset;
+    }
+  }
