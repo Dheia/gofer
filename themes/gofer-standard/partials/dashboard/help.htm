@@ -7,50 +7,52 @@
             <!-- Form -->
             
             
-                                            <!--  ----------------------------------------------------------------------  -->
-        <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-        <!--  If necessary, please modify the charset parameter to specify the        -->
-        <!--  character set of your HTML page.                                        -->
-        <!--  ----------------------------------------------------------------------  -->
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
 
-        <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-            <script src="https://www.google.com/recaptcha/api.js"></script>
-            <script>
-            function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-            </script>
             
-            <!--  ----------------------------------------------------------------------  -->
-            <!--  NOTE: Please add the following <FORM> element to your page.             -->
-            <!--  ----------------------------------------------------------------------  -->
-            
-            <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
-            
-            <input type=hidden name='captcha_settings' value='{"keyname":"Gofer","fallback":"true","orgId":"00D2w00000FZxg0","ts":""}'>
-            <input type=hidden name="orgid" value="00D2w00000FZxg0">
-            <input type=hidden name="retURL" value="https://gofer.ph">
-            
-            <!--  ----------------------------------------------------------------------  -->
-            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-            <!--  these lines if you wish to test in debug mode.                          -->
-            <!--  <input type="hidden" name="debug" value=1>                              -->
-            <!--  <input type="hidden" name="debugEmail" value="jromedrosa@gofer.ph">     -->
-            <!--  ----------------------------------------------------------------------  -->
-            
-            <label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" class="input is-medium" /><br>
-            
-            <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" class="input is-medium"/><br>
-            
-            <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" class="input is-medium"/><br>
-            
-            <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" class="input is-medium"/><br>
-            
-            <label for="description">Description</label><textarea name="description" class="textarea"></textarea><br>
-            
-            <div class="g-recaptcha" data-sitekey="6Le4-dcZAAAAAGgASwELFY5lgSh0yRlW-l8f_qEH"></div><br>
-            <input type="submit" name="submit" class="button cta is-large primary-btn form-button raised is-clear">
-            
-            </form>
-
+                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <script>
+                function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+                </script>
+                
+                <!--  ----------------------------------------------------------------------  -->
+                <!--  NOTE: Please add the following <FORM> element to your page.             -->
+                <!--  ----------------------------------------------------------------------  -->
+                
+                <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+                
+                <input type=hidden name='captcha_settings' value='{"keyname":"Gofer","fallback":"true","orgId":"00D2w00000FZyVr","ts":""}'>
+                <input type=hidden name="orgid" value="00D2w00000FZyVr">
+                <input type=hidden name="retURL" value="http://gofer.ph">
+                
+                <!--  ----------------------------------------------------------------------  -->
+                <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                <!--  these lines if you wish to test in debug mode.                          -->
+                <!--  <input type="hidden" name="debug" value=1>                              -->
+                <!--  <input type="hidden" name="debugEmail" value="jromedrosa@gofer.ph">     -->
+                <!--  ----------------------------------------------------------------------  -->
+                
+                <label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" class="input is-medium"/><br>
+                
+                <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" class="input is-medium"/><br>
+                
+                <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" class="input is-medium"/><br>
+                
+                <label for="company">Company</label><input  id="company" maxlength="80" name="company" size="20" type="text" class="input is-medium"/><br>
+                
+                <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" class="input is-medium"/><br>
+                
+                <label for="description">Description</label><textarea name="description" class="textarea"></textarea><br>
+                
+                <div class="g-recaptcha" data-sitekey="6Le4-dcZAAAAAGgASwELFY5lgSh0yRlW-l8f_qEH"></div><br>
+                <input type="submit" name="submit">
+                
+                </form>
+    
 
 
             <!-- /Form -->
