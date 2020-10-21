@@ -49,11 +49,16 @@ hideOnEmpty = 1
 
         <style type='text/css'>
             .embeddedServiceHelpButton .helpButton .uiButton {
-                background-color: #005290;
-                font-family: "Arial", sans-serif;
+                background-color: #00dbc7;
+                font-family: "Salesforce Sans", sans-serif;
             }
             .embeddedServiceHelpButton .helpButton .uiButton:focus {
-                outline: 1px solid #005290;
+                outline: 1px solid #00dbc7;
+            }
+            @font-face {
+                font-family: 'Salesforce Sans';
+                src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+                url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
             }
         </style>
         
@@ -82,7 +87,7 @@ hideOnEmpty = 1
                 embedded_svc.settings.entryFeature = 'LiveAgent';
         
                 embedded_svc.init(
-                    'https://ap16.salesforce.com',
+                    'https://gofer.my.salesforce.com',
                     'https://gofer.force.com/liveAgentSetupFlow',
                     gslbBaseURL,
                     '00D2w00000FZyVr',
@@ -93,14 +98,14 @@ hideOnEmpty = 1
                         buttonId: '5732w00000017sx',
                         baseLiveAgentURL: 'https://d.la2-c2-ukb.salesforceliveagent.com/chat',
                         eswLiveAgentDevName: 'Chat_Group',
-                        isOfflineSupportEnabled: true
+                        isOfflineSupportEnabled: false
                     }
                 );
             };
         
             if (!window.embedded_svc) {
                 var s = document.createElement('script');
-                s.setAttribute('src', 'https://ap16.salesforce.com/embeddedservice/5.0/esw.min.js');
+                s.setAttribute('src', 'https://gofer.my.salesforce.com/embeddedservice/5.0/esw.min.js');
                 s.onload = function() {
                     initESW(null);
                 };
